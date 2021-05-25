@@ -12,7 +12,6 @@ app.use(express.json());
 app.use('/', require('./html'));
 app.use('/api/calc', require('./html/calc'));
 
-app.set("views", path.join(__dirname,"html"));
 app.listen(app.get('port'), () => {
   console.log(`Server runnig on port ${app.get('port')}`);
 })

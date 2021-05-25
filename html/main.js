@@ -1,7 +1,4 @@
 
-
-
-
 const makeOperation = ()=>{
 
     const regex = /x/ig;
@@ -17,20 +14,13 @@ const makeOperation = ()=>{
 
     fetch(`http://localhost:3000/api/calc`,{
         method: 'POST', 
-        mode: 'cors',
-        cache: 'no-cache', 
-        credentials: 'same-origin', 
         headers: { 'Content-Type': 'application/json' },
-        redirect: 'follow', 
-        referrerPolicy: 'no-referrer', 
         body: JSON.stringify(data) 
     })
     .then(response => response.json())
     .then(data => {
         console.log(data)
         document.getElementById('dataresponse').value = JSON.stringify(data, null, 2);
-  
-        //document.getElementById('resultField').innerHTML = `= ${data.result}`;
       })
       .catch(error => {
           
@@ -38,7 +28,6 @@ const makeOperation = ()=>{
         console.log(`ERRRRRRRR: ${error}`)});
   
 
-   
 
 }
 
