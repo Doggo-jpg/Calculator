@@ -1,7 +1,7 @@
 
 {
   "scripts": {
-    "dev": "nodemon -L "
+    "dev": "nodemon index.js "
   },
   "devDependencies": {
     "bootstrap": "^5.0.1",
