@@ -9,7 +9,7 @@ const makeOperation = ()=>{
     
     console.log(data);
 
-    document.getElementById('datasent').value = JSON.stringify(data);//writes expresion in index
+    document.getElementById('datasent').value = JSON.stringify(data,null,2);//writes expresion in index
 
     fetch(`http://localhost:3000/api/calc`,{  //fetch post of api
         method: 'POST', 
